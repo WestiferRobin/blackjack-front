@@ -7,10 +7,11 @@
     - Modes should be on the side.
     - Should have a dummy login and page creation.
 - 1v1 View
+    - See about chaning the card layout to using svg file assets from this location
+        - https://github.com/hayeah/playing-cards-assets/tree/master/svg-cards
     - Should have dealer cards with ammount
     - Should have player cards and with working buttons
         - Hit, Stand, Double, Split should work flawlessly
-    - 
 
 ## General Notes
 - Should have the following modes/views
