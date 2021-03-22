@@ -6,30 +6,43 @@ const cardFaces = [
     '10', 'J', 'Q', 'K'
 ];
 
+export const spade = '\u{2660}';
+export const heart = '\u{2665}';
+export const club = '\u{2663}';
+export const diamond = '\u{2666}';
+
 const cardSuits = [
-    'H', 'D', 'S', 'C'
+    spade, heart, club, diamond
 ];
 
-function Card(face, suite, id) {
-    this.face = face;
-    this.suite = suite;
-    this.cardId = id;
+export class Card {
+    constructor(face, suite, id) {
+        this.face = face;
+        this.suite = suite;
+        this.cardId = id;
+    }
 }
 
-function Deck(deckSize, deckId = 0) {
+export class Deck {
 
-    this.deckSize = deckSize;
+    constructor(deckSize, deckId = 0) {
+        this.deckSize = deckSize;
+        this.cards = [];
+        this.deckId = deckId;
+        this.cards = [];
+    }
+    
+    dealCard() {
+        if (this.cards.length === 0) {
+            return;
+        }
+        return this.cards.shift();
+    }
 
-    this.cards = []
-
-    this.deckId = deckId;
-
-    this.cards = [];
-
-    this.initDeck = () => {
+    initDeck() {
         let assignId = 0;
         let offset = this.deckSize;
-        
+
         while (offset > 0) {
             cardFaces.forEach(face => {
                 cardSuits.forEach(suite => {
@@ -41,21 +54,7 @@ function Deck(deckSize, deckId = 0) {
         }
     }
 
-    this.shuffle = () => this.cards.sort(() => 0.5 - Math.random());
-
-    this.dealCard = () => {
-        if (this.cards.length === 0)
-        {
-            console.log('there are no cards left');
-            return;
-        }
-        return this.cards.shift();
-    }
-}
-
-
-module.exports = {
-    createShoe: function(size) {
-        return new Deck(size, "ASDFASDF");
+    shuffle() {
+        this.cards.sort(() => 0.5 - Math.random());
     }
 }

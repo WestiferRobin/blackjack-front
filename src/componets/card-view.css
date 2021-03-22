@@ -1,0 +1,29 @@
+.base-card {
+    background-color: white;
+    height: 85px;
+    width: 50px;
+    margin: 5px;
+    border: 3px solid black;
+}
+
+#base-card .top-number {
+    padding: 5px;
+	position: relative;
+    text-align: left;
+}
+
+
+#base-card .bot-number {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: bottom;
+}
+
+.red-card {
+    color: red;
+}
+
+.black-card {
+    color: black;
+}
