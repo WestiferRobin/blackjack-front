@@ -2,23 +2,16 @@
 
 ## Development TODOS
 - Solo View
-    - See about chaning the card layout to using svg file assets from this location
-        - https://github.com/hayeah/playing-cards-assets/tree/master/svg-cards
-    - Should have player cards and with working buttons as well as displaying cards with betting ammount.
+    - Should have dealer and players cards showed and card ammount
+    - Player cards and with working buttons as well as displaying cards with betting ammount.
         - Hit, Stand, Double, Split should work flawlessly
-    - Should have dealer cards showed and card ammount
+        - ENSURE THE BUTTONS LOOK LIKE VIDEO BLACK JACK LIKE THE IPAD APP!!!!
     - Sync logic of basic game of blackjack from player and dealer.
+    - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
     - Create as a mode with the Splsh screen (App.js)
 - App.js
-    - Move everything from App to be in different views
-    - Blackjack title will need to be center and on top.
-<<<<<<< HEAD
-    - Modes should be on the side. (Look at modes in General Notes)
-=======
-    - Change the stupid fucking react icon to something else.
     - Modes should be on the side.
->>>>>>> e425c283b4de0fc9512a2530494b07d61a2c8cba
-    - Should have a dummy login and page creation.
+    - Rename to splash
 - Group Game
     - Solo View but with multiple players
 - Traning 
@@ -31,6 +24,8 @@
     - CREATE A FUCKING BASIC NN.
     - Have different options to generate a graph and rates
     - Bonus points if you can animate it
+- App.test.js
+    - Don't know what it is but check it out and write tests. Move it up sooner if needed.
     
 ## General Notes
 - Should have the following modes/views
@@ -48,7 +43,7 @@
         - Should at least write a wireframe on that
     - Options
         - Don't know what it would be used for but needed. 
-- Since this will be user based there needs a loggin on the side
+- Debate on having a user login once finished the Simulation on Dev TODOS
 
 ## UI/UX Notes
 - Make the cards not look like shit

@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.App-body {
   background-color: #35654d;
   min-height: 100vh;
   display: flex;
@@ -41,3 +41,4 @@
     transform: rotate(360deg);
   }
 }
+ 
