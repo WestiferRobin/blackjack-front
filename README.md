@@ -1,6 +1,9 @@
 # BLACK JACK FRONT END
 
 ## Development TODOS
+- App.js
+    - Modes should be on the side.
+    - Rename to splash
 - Solo View
     - Should have dealer and players cards showed and card ammount
     - Player cards and with working buttons as well as displaying cards with betting ammount.
@@ -9,9 +12,6 @@
     - Sync logic of basic game of blackjack from player and dealer.
     - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
     - Create as a mode with the Splsh screen (App.js)
-- App.js
-    - Modes should be on the side.
-    - Rename to splash
 - Group Game
     - Solo View but with multiple players
 - Traning 
