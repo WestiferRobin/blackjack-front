@@ -12,7 +12,12 @@
 - App.js
     - Move everything from App to be in different views
     - Blackjack title will need to be center and on top.
+<<<<<<< HEAD
     - Modes should be on the side. (Look at modes in General Notes)
+=======
+    - Change the stupid fucking react icon to something else.
+    - Modes should be on the side.
+>>>>>>> e425c283b4de0fc9512a2530494b07d61a2c8cba
     - Should have a dummy login and page creation.
 - Group Game
     - Solo View but with multiple players
