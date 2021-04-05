@@ -44,6 +44,12 @@
     - Options
         - Don't know what it would be used for but needed. 
 - Debate on having a user login once finished the Simulation on Dev TODOS
+- WHEN I get to the backend. Here are some notes that I was doodling out side of dev time.
+    - Inputs should be dealer and player ammount ONLY (1v1) and some how include face cards to determine splits or whatever 
+    - Have the output be some binary rep of the states (Stand, Hit, Spilt, Double, or Surrender). 
+    - PROBLEM is designing each node to spit out relations to get the output aka the desired state.
+    - ALSO NOTE: you need to have some indicator at the top of the screen of when the needed info is completed for the NN to run simulations.
+        - AKA A SHIT TON OF TESTING!!!!!! and update the UI once decided on a value.
 
 ## UI/UX Notes
 - Make the cards not look like shit
