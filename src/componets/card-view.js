@@ -16,11 +16,12 @@ export class CardView extends React.Component
     {
         super(props);
         this.convertToChar = this.convertToChar.bind(this);
+        this.state = {hidden: this.props.isHidden, card: this.props.card};
     }
 
     convertToChar()
     {
-        switch(this.props.card.suite)
+        switch(this.state.card.suite)
         {
             case spade:
                 return "S";
@@ -30,25 +31,22 @@ export class CardView extends React.Component
                 return "H";
             case club:
                 return "C";
+            default:
+                throw -1;
         }
     }
 
-
-    // TODO: Fix the damn view to look like real card and not sticks!!!!!
     render()
     {
-        const cardSuite = this.convertToChar();
-        return (
-            <img src={images[`${this.props.card.face}${cardSuite}.png`].default} height="300px" alt="logo" />
-        );
-        // var cardColor  = this.props.card.suite === spade || this.props.card.suite === club ? "base-card black-card" : "base-card red-card";
-        // return (
-        //     <div className={cardColor}>
-        //         <div className="top-number">{this.props.card.face}</div>
-        //         <span >{this.props.card.suite}</span>
-        //         <div className="bot-number">{this.props.card.face}</div>
-        //     </div>
-        // );
+        if (this.state.hidden)
+        {
+            return ( <img onClick={() => this.setState({hidden: !this.state.hidden, card: this.state.card})} src={images["red_back.png"].default} height="300px" alt="logo" />);
+        }
+        else
+        {
+            const cardSuite = this.convertToChar();
+            return ( <img onClick={() => this.setState({hidden: !this.state.hidden, card: this.state.card})} src={images[`${this.state.card.face}${cardSuite}.png`].default} height="300px" alt="logo" />);
+        }
     }
 }
 

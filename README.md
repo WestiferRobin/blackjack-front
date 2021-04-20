@@ -1,31 +1,36 @@
 # BLACK JACK FRONT END
 
-## Development TODOS
-- App.js
-    - Modes should be on the side.
-    - Rename to splash
+## THE TODO(S)
 - Solo View
+    - Fix warnings before starting dev for SoloView
+    - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
+        - Replicate with Garageband or FL studio and apply the sounds because sounds are not free.
     - Should have dealer and players cards showed and card ammount
     - Player cards and with working buttons as well as displaying cards with betting ammount.
         - Hit, Stand, Double, Split should work flawlessly
-        - ENSURE THE BUTTONS LOOK LIKE VIDEO BLACK JACK LIKE THE IPAD APP!!!!
     - Sync logic of basic game of blackjack from player and dealer.
-    - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
-    - Create as a mode with the Splsh screen (App.js)
-- Group Game
-    - Solo View but with multiple players
+    - Able to have a betting system.
+        - Use units and then dollar ammounts
+- Test Scripts
+    - Consider on having test scripts for the front end. I have no idea on how but I should consier it.
+- Group Game                              
+    - Solo View but with multiple players ( 2 - 7 )
+    - Able to choose a "seat"
 - Traning 
     - Include the "General Notes" options
     - Have high scores 
     - Be sure Quiz game is the gate keeper for getting into the casino or not
 - Options
     - Basic shit for options? Just have it created and revist again after simulation.
+        - Hard reset to backend
+        - able to select backdrop
+        - able to select color scheme
+        - Able to choose Money unit and bankroll
+    - Able to hold same game across mode header.
 - Simulation
     - CREATE A FUCKING BASIC NN.
     - Have different options to generate a graph and rates
     - Bonus points if you can animate it
-- App.test.js
-    - Don't know what it is but check it out and write tests. Move it up sooner if needed.
     
 ## General Notes
 - Should have the following modes/views
@@ -63,3 +68,4 @@
 - Selling point would be the NN stats (and other features)
     - Should be like 1-5 bucks a month for just the stats while the training thing is free.
     - Should be Free vs Premium package... just need more than a fucking NN feature.
+    - Able to buy more "Fake Money" or look at charging people money some how for "Money"

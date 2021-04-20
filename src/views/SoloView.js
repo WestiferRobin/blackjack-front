@@ -1,14 +1,15 @@
 import React from "react"
 import { Deck } from "../types/card-types"
 import { CardView } from "../componets/card-view"
+import './SoloView.css'
 
 export class SoloView extends React.Component
 {
+    state = {card: "None cards drawn", deck: new Deck(1) };
     constructor(props) 
     {
         super(props);
 
-        this.state = {card: "None cards drawn", deck: new Deck(1), };
         this.state.deck.initDeck();
         this.state.deck.shuffle();
         this.displayCards = [];     // NOTE: This is a debug element and will be removed
@@ -43,7 +44,7 @@ export class SoloView extends React.Component
     {
         let card = this.state.deck.dealCard();
         let deckInst = this.state.deck;
-        this.displayCards.push(<CardView card={card} />);
+        this.displayCards.push(<CardView card={card} isHidden={false}/>);
         this.setState(state => ({
             card: card,
             deck: deckInst
@@ -53,19 +54,21 @@ export class SoloView extends React.Component
     render()
     {
         return (
-            <div className="SoloView-body">
-                Remaning cards in deck is {this.state.deck.cards.length}
-                <div class="topContainer">
-                    {this.renderCardView()}
-                </div>
-                {/* TODO WORK ON THESE FUCKING BUTTONS!!!!! */}
-                <div class="topContainer">
+            <div>
+                <body className="SoloView-body">
+                    Remaning cards in deck is {this.state.deck.cards.length}
+                    <div class="topContainer">
+                        {this.renderCardView()}
+                    </div>
+                </body>
+                <footer className="SoloView-footer">
                     <button onClick={this.seeCard}>Hit</button>
                     <button onClick={() => alert("Doesn't work yet")}>Stand</button>
                     <button onClick={() => alert("Doesn't work yet")}>Double</button>
                     <button onClick={() => alert("Doesn't work yet")}>Split</button>
                     <button onClick={this.resetGame}>Reset</button>
-                </div>
+
+                </footer>
             </div>
           );
     }

@@ -4,7 +4,7 @@ text-align: center;
 
 .SoloView-body{
 background-color: #35654d;
-min-height: 100vh;
+min-height: 83vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -13,7 +13,58 @@ font-size: calc(10px + 2vmin);
 color: white;
 }
 
+.SoloView-footer{
+  display: flex;
+  flex-direction: row;
+  background-color: #35654d;
+  margin: 1%;
+  margin-bottom: 0;
+}
+
+button {
+  color: yellow;
+  font-size: xx-large;
+  background-color: transparent;
+  border-color: red;
+  border-width: 5px;
+  padding: 1%;
+  margin-left: calc(8% - 1px);
+  width: 200px;
+}
+
 .topContainer{
     display: flex;
     flex-direction: row;
   }
+
+  /* 
+  NOTE: THIS IS FROM THE OLD APP.js before refactor
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .App-body {
+    background-color: #35654d;
+    min-height: 94vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  .topContainer{
+    display: flex;
+    flex-direction: row;
+  } */
+  
