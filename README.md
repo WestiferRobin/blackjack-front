@@ -3,9 +3,11 @@
 ## THE TODO(S)
 - Solo View
     - Fix warnings before starting dev for SoloView
-    - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
-        - Replicate with Garageband or FL studio and apply the sounds because sounds are not free.
+    - Start writing a wrapper for REST api calls
+        - Get introduced to Express.js
+    - Decide to get rid of group or keep it. It doesn't really matter that much.
     - Should have dealer and players cards showed and card ammount
+    - Determine on cards having touch functionality and how that would works
     - Player cards and with working buttons as well as displaying cards with betting ammount.
         - Hit, Stand, Double, Split should work flawlessly
     - Sync logic of basic game of blackjack from player and dealer.
@@ -13,9 +15,6 @@
         - Use units and then dollar ammounts
 - Test Scripts
     - Consider on having test scripts for the front end. I have no idea on how but I should consier it.
-- Group Game                              
-    - Solo View but with multiple players ( 2 - 7 )
-    - Able to choose a "seat"
 - Traning 
     - Include the "General Notes" options
     - Have high scores 
@@ -31,25 +30,19 @@
     - CREATE A FUCKING BASIC NN.
     - Have different options to generate a graph and rates
     - Bonus points if you can animate it
+- Splash Screen
+    - I need it to login in.....
+- Ending Functionality to Apply
+    - Look up on using ads on the website to generate revenue
+    - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
+        - Replicate with Garageband or FL studio and apply the sounds because sounds are not free.
+    - Group Game                              
+        - Solo View but with multiple players ( 2 - 7 )
+        - Able to choose a "seat"
     
 ## General Notes
-- Should have the following modes/views
-    - Trainer
-        - Betting 
-        - Basic Strategy
-        - Counting
-        - Quiz Game
-    - Solo Game
-        - Don't know if there should be
-    - Group Game (2-4 People)
-        - Unsure if to include other local players but this will be in a casino settings
-    - NN stats (Simulaton)
-        - Need to do more digging on that....
-        - Should at least write a wireframe on that
-    - Options
-        - Don't know what it would be used for but needed. 
-- Debate on having a user login once finished the Simulation on Dev TODOS
 - WHEN I get to the backend. Here are some notes that I was doodling out side of dev time.
+    - It's a javascript projects thus I need express.js
     - Inputs should be dealer and player ammount ONLY (1v1) and some how include face cards to determine splits or whatever 
     - Have the output be some binary rep of the states (Stand, Hit, Spilt, Double, or Surrender). 
     - PROBLEM is designing each node to spit out relations to get the output aka the desired state.
@@ -61,7 +54,6 @@
 - Have buttons like retro black jack
     - Look at the video poker black jack app
     - I'm not an artist and should be minimal
-- See if you can find poker noises and apply them some how.
 - Options should be a whole thing but just have checkbox whenever a mode is selected.
 
 ## Future updates after launch
