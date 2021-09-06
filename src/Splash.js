@@ -22,7 +22,6 @@ export default class Splash extends React.Component {
         <header style={{backgroundColor:"black", color:"white", fontSize: "50px"}}>
           <ul>
             <li><button onClick={() => this.setFlag("solo")}>Solo</button></li>
-            <li><button onClick={() => this.setFlag("group")}>Group</button></li>
             <li><button onClick={() => this.setFlag("training")}>Training</button></li>
             <li><button onClick={() => this.setFlag("simulation")}>Simulation</button></li>
             <li><button onClick={() => this.setFlag("options")}>Options</button></li>

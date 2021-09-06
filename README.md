@@ -2,12 +2,8 @@
 
 ## THE TODO(S)
 - Solo View
-    - Fix warnings before starting dev for SoloView
-    - Start writing a wrapper for REST api calls
-        - Get introduced to Express.js
-    - Decide to get rid of group or keep it. It doesn't really matter that much.
     - Should have dealer and players cards showed and card ammount
-    - Determine on cards having touch functionality and how that would works
+        - Look at notes of SoloEngine.js
     - Player cards and with working buttons as well as displaying cards with betting ammount.
         - Hit, Stand, Double, Split should work flawlessly
     - Sync logic of basic game of blackjack from player and dealer.
@@ -16,15 +12,14 @@
 - Test Scripts
     - Consider on having test scripts for the front end. I have no idea on how but I should consier it.
 - Traning 
-    - Include the "General Notes" options
-    - Have high scores 
-    - Be sure Quiz game is the gate keeper for getting into the casino or not
+    - Include a selection of modes to choose
+        - Counting, basic strategy, and quiz
 - Options
     - Basic shit for options? Just have it created and revist again after simulation.
         - Hard reset to backend
         - able to select backdrop
         - able to select color scheme
-        - Able to choose Money unit and bankroll
+        - Able to choose Money unit and bankroll 
     - Able to hold same game across mode header.
 - Simulation
     - CREATE A FUCKING BASIC NN.
@@ -36,9 +31,6 @@
     - Look up on using ads on the website to generate revenue
     - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
         - Replicate with Garageband or FL studio and apply the sounds because sounds are not free.
-    - Group Game                              
-        - Solo View but with multiple players ( 2 - 7 )
-        - Able to choose a "seat"
     
 ## General Notes
 - WHEN I get to the backend. Here are some notes that I was doodling out side of dev time.

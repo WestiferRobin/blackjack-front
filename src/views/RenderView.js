@@ -1,6 +1,5 @@
 import React from "react";
 import SoloView from "./SoloView";
-import GroupView from "./GroupView";
 import TrainingView from "./TrainingView";
 import SimulationView from "./SimulationView";
 import OptionsView from "./OptionsView";
@@ -10,7 +9,6 @@ export class RenderView extends React.Component
 {
     views = {
         "solo": <SoloView />,
-        "group": <GroupView />,
         "training": <TrainingView />,
         "simulation": <SimulationView />,
         "options": <OptionsView />,

@@ -4,7 +4,7 @@ import {spade, club, heart, diamond} from '../types/card-types';
 
 function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item, index) => ( images[item.replace('./', '')] = r(item)));
     return images;
   }
   
@@ -32,7 +32,7 @@ export class CardView extends React.Component
             case club:
                 return "C";
             default:
-                throw -1;
+                return null;
         }
     }
 

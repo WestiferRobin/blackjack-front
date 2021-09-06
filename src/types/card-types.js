@@ -29,6 +29,7 @@ export class Deck {
         this.cards = [];
         this.deckId = deckId;
         this.cards = [];
+        this.assignId = 0;
     }
     
     dealCard() {
@@ -39,14 +40,14 @@ export class Deck {
     }
 
     initDeck() {
-        let assignId = 0;
+        this.assignId = 0;
         let offset = this.deckSize;
 
         while (offset > 0) {
             cardFaces.forEach(face => {
                 cardSuits.forEach(suite => {
-                    this.cards.push(new Card(face, suite, assignId));
-                    assignId++;
+                    this.cards.push(new Card(face, suite, this.assignId));
+                    this.assignId++;
                 });
             });
             offset--;
