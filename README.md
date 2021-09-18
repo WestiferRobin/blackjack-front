@@ -3,9 +3,11 @@
 ## THE TODO(S)
 - Solo View
     - Should have dealer and players cards showed and card ammount
-        - Look at notes of SoloEngine.js
+        - Change the raw ints into an enum or a constants file
+        - Fix the reset functionality
     - Player cards and with working buttons as well as displaying cards with betting ammount.
         - Hit, Stand, Double, Split should work flawlessly
+            - Look at SoloEngine.js for notes under 
     - Sync logic of basic game of blackjack from player and dealer.
     - Able to have a betting system.
         - Use units and then dollar ammounts
@@ -28,6 +30,7 @@
 - Splash Screen
     - I need it to login in.....
 - Ending Functionality to Apply
+    - POLISH ALL OF THE UI IF NOT DONE ALREADY!!!!!!!!!
     - Look up on using ads on the website to generate revenue
     - Add some sounds if possible VERY SIMILAR TO VIDEO BLACKJACK
         - Replicate with Garageband or FL studio and apply the sounds because sounds are not free.

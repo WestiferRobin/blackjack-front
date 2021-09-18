@@ -5,22 +5,29 @@ import { RestWarpper } from "../rest-wrapper/rest-wrapper"
 
 export default class SoloEngine extends React.Component
 {
-    state = {card: "None cards drawn", deck: new Deck(1) };
     constructor(props) 
     {
          super(props);
 
-         this.gameState = 0;
+        // NOTE: Change the raw ints to an enum
+         this.state = {
+            card: "None cards drawn", 
+            deck: new Deck(1),
+            gameState: 0
+         }
 
-         // move to the SoloEngine
          this.state.deck.initDeck();
          this.state.deck.shuffle();
+
+
          this.displayCards = [];     // NOTE: This is a debug element and will be removed
  
          this.seeCard = this.seeCard.bind(this);
          this.renderCardView = this.renderCardView.bind(this);
          this.resetGame = this.resetGame.bind(this);
          this.renderGame = this.renderGame.bind(this);
+         this.increaseGameState = this.increaseGameState.bind(this);
+         this.decreaseGameState = this.decreaseGameState.bind(this);
     }
 
     resetGame() 
@@ -55,16 +62,44 @@ export default class SoloEngine extends React.Component
         }));
     }
 
+    increaseGameState()
+    {
+        this.setState({gameState: this.state.gameState + 1})
+    }
+
+    decreaseGameState()
+    {
+        this.setState({gameState: this.state.gameState - 1 })
+    }
+
+    playGame()
+    {
+        return "THIS IS WHERE THE SOLO GAME IS TRIGGERED"
+        // Draw Player and Dealer's cards
+        // User makes a button select. BE SURE TO HAVE ERROR HANDLING!!!!!!
+            // Hit gives a card 1
+            // Stand triggers the next steps 2
+            // Double just adds a flat down card. AKA its like a Stand 4
+            // Split needs an animation to switch. AKA THIS WILL BE THE HARDEST 3
+        // Dealers plays
+        // Add betting to system for wins and losses
+            // Need a simple UI for SoloView for betting
+    }
+
     renderGame()
     {
-        alert(this.gameState); //DEBUG STATEMENT!!!!!!
-        switch (this.gameState)
+        // NOTE: Change the raw ints to an enum
+        switch (this.state.gameState)
         {
             case 0:
                 return <div>
-                    <button onClick={() => this.gameState++}>New Game</button>
+                        <button onClick={() => this.increaseGameState()}>New Game</button>
                 </div>
             case 1:
+                return <div class="topContainer">
+                        {this.playGame()}
+                </div>
+            default:
                 return <div>
                     {RestWarpper.get_user_info()["name"]}: Remaning cards in deck is {this.state.deck.cards.length}
                     <div class="topContainer">
@@ -74,30 +109,13 @@ export default class SoloEngine extends React.Component
                         {this.renderCardView()}
                     </div>
                 </div>
-            default:
-                return <div>FUCK NOW</div>
         }
     }
 
     render()
     {
         return (
-            <div>
-                <body>
-                {/* <body className="SoloView-body"> */}
-                    {this.renderGame()}
-                {/* </body> */}
-                </body>
-                {/* TODO: SEE IF HAVING A GENUINE MVC STYLE */}
-                <footer className="SoloView-footer">
-                    <button onClick={this.seeCard}>Hit</button>
-                    <button onClick={() => this.gameState++}>Stand</button>
-                    <button onClick={() => alert("Doesn't work yet")}>Double</button>
-                    <button onClick={() => alert("Doesn't work yet")}>Split</button>
-                    <button onClick={this.resetGame}>Reset</button>
-
-                </footer>
-            </div>
+            <div> {this.renderGame()} </div>
         )
     }
 }
