@@ -2,9 +2,7 @@
 
 ## THE TODO(S)
 - Solo View
-    - Should have dealer and players cards showed and card ammount
-        - Change the raw ints into an enum or a constants file
-        - Fix the reset functionality
+    - Fix the reset functionality
     - Player cards and with working buttons as well as displaying cards with betting ammount.
         - Hit, Stand, Double, Split should work flawlessly
             - Look at SoloEngine.js for notes under 

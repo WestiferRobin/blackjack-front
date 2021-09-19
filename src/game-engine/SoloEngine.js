@@ -1,7 +1,8 @@
 import React from "react";
-import { Deck } from "../types/card-types"
-import { CardView } from "../componets/card-view"
-import { RestWarpper } from "../rest-wrapper/rest-wrapper"
+import { Deck } from "../types/card-types";
+import { CardView } from "../componets/card-view";
+import { RestWarpper } from "../rest-wrapper/rest-wrapper";
+import {soloState, buttonAction} from "../constants";
 
 export default class SoloEngine extends React.Component
 {
@@ -26,8 +27,7 @@ export default class SoloEngine extends React.Component
          this.renderCardView = this.renderCardView.bind(this);
          this.resetGame = this.resetGame.bind(this);
          this.renderGame = this.renderGame.bind(this);
-         this.increaseGameState = this.increaseGameState.bind(this);
-         this.decreaseGameState = this.decreaseGameState.bind(this);
+         this.setGameState = this.setGameState.bind(this);
     }
 
     resetGame() 
@@ -62,18 +62,19 @@ export default class SoloEngine extends React.Component
         }));
     }
 
-    increaseGameState()
+    setGameState(gameState)
     {
-        this.setState({gameState: this.state.gameState + 1})
-    }
-
-    decreaseGameState()
-    {
-        this.setState({gameState: this.state.gameState - 1 })
+        this.setState({gameState:gameState});
     }
 
     playGame()
     {
+        alert(this.props.controlFlag)
+        if (this.props.controlFlag === buttonAction.RESET)
+        {
+            this.setGameState(soloState.NEW);
+            return "RESET"
+        }
         return "THIS IS WHERE THE SOLO GAME IS TRIGGERED"
         // Draw Player and Dealer's cards
         // User makes a button select. BE SURE TO HAVE ERROR HANDLING!!!!!!
@@ -88,17 +89,20 @@ export default class SoloEngine extends React.Component
 
     renderGame()
     {
+        
         // NOTE: Change the raw ints to an enum
         switch (this.state.gameState)
         {
-            case 0:
+            case soloState.NEW:
                 return <div>
-                        <button onClick={() => this.increaseGameState()}>New Game</button>
+                        <button onClick={() => this.setGameState(soloState.PLAY)}>New Game</button>
                 </div>
-            case 1:
+            case soloState.PLAY:
                 return <div class="topContainer">
                         {this.playGame()}
                 </div>
+            case soloState.END:
+                return <div>END STATE</div>
             default:
                 return <div>
                     {RestWarpper.get_user_info()["name"]}: Remaning cards in deck is {this.state.deck.cards.length}

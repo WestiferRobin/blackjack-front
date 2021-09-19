@@ -1,6 +1,7 @@
 import React from "react"
 import './SoloView.css'
 import SoloEngine from "../game-engine/SoloEngine"
+import {buttonAction} from "../constants";
 
 export class SoloView extends React.Component
 {
@@ -8,7 +9,7 @@ export class SoloView extends React.Component
     constructor(props)
     {
         super(props);
-        this.state = {controlFlag: "New"};
+        this.state = {controlFlag: buttonAction.NEW};
         this.changeFlag = this.changeFlag.bind(this);
     }
 
@@ -27,11 +28,11 @@ export class SoloView extends React.Component
             </body>
             <footer className="SoloView-footer">
                 {/*Change these String values into enums*/}
-                    <button onClick={() => this.changeFlag("Hit")}>Hit</button>
-                    <button onClick={() => this.changeFlag("Stand")}>Stand</button>
-                    <button onClick={() => this.changeFlag("Double")}>Double</button>
-                    <button onClick={() => this.changeFlag("Split")}>Split</button>
-                    <button onClick={() => this.changeFlag("Reset")}>Reset</button>
+                    <button onClick={() => this.changeFlag(buttonAction.HIT)}>Hit</button>
+                    <button onClick={() => this.changeFlag(buttonAction.STAND)}>Stand</button>
+                    <button onClick={() => this.changeFlag(buttonAction.DOUBLE)}>Double</button>
+                    <button onClick={() => this.changeFlag(buttonAction.SPLIT)}>Split</button>
+                    <button onClick={() => this.changeFlag(buttonAction.RESET)}>Reset</button>
 
                 </footer>
             </div>
