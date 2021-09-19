@@ -18,7 +18,7 @@ export default class Splash extends React.Component {
 
   render() {
     return (
-      <div >
+      <div>
         <header style={{backgroundColor:"black", color:"white", fontSize: "50px"}}>
           <ul>
             <li><button onClick={() => this.setFlag("solo")}>Solo</button></li>

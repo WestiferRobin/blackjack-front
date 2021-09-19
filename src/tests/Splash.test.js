@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Splash from './Splash';
+import Splash from '../Splash';
 
 test('renders learn react link', () => {
   render(<Splash />);
